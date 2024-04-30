@@ -23,7 +23,7 @@ body.wrapper {
         align-items: center;
         justify-content: space-between;
         padding: 10px;
-        padding-inline: 20px;
+        padding-inline: 40px;
         background-color: var(--lk-primary);
         color: var(--lk-bg-color);
         z-index: 2;
@@ -32,11 +32,15 @@ body.wrapper {
             height: 30px;
         };
         .menu {
+            font-size: 20px;
             display: flex;
             flex-direction: row;
             align-items: center; 
             justify-content: center; 
-            gap: 20px;
+            gap: 40px;
+            nav {
+                cursor: pointer;    
+            }
         }
     };
     main {
@@ -63,10 +67,32 @@ body.wrapper {
                 }
                 .preview-desc {
                     font-size: 20px;
-                }
+                };
+                transition: all .5s ease-in-out ;
+            }
+            .preview-text:hover {
+                scale: 1.1;
             }
         }
-        .main {
+        .what {
+            padding: 60px;
+            padding-inline: 20px;
+            background-color: var(--lk-primary);
+            color: var(--lk-bg-color);
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: center;
+            gap: 20px;
+            h1 {
+                font-size: 40px;
+            }
+            .descr {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+        .why {
             margin-top: 40px;
             padding: 20px;
             h2 {
@@ -92,12 +118,57 @@ body.wrapper {
                     cursor: pointer;
                     .title {
                         font-size: 20px;
+                        color: var(--lk-grey);
                     }
                     img {
                         align-self: flex-end;
                         width: 40px;
                         height: 40px;
                         color:  var(--lk-orange);
+                    }
+                    transition: all .3s ease-in-out ;
+                }
+                .item:hover {
+                    .title {
+                        color: var(--lk-orange);
+                    };
+                    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
+                    img {
+                        scale: 1.2;
+                    }
+                }
+            }
+        }
+        .buy {
+            padding: 20px;
+            h2 {
+                font-size: 40px;
+            }
+            .descr {
+                color: var(--lk-grey);
+                font-size: 20px;
+                margin-top: 20px
+            }
+            .items {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                gap: 40px;
+                .item {
+                    padding: 10px;
+                    border-radius: 4px;
+                    background-color: var(--lk-primary);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                };
+                
+                .my {
+                    img {
+                        width: 30px;
+                        height: 30px;
                     }
                 }
             }
@@ -108,5 +179,34 @@ body.wrapper {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 40px;
+        background-color: var(--lk-primary);
+        color: var(--lk-bg-color);
+        padding: 40px;
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            column-gap: 60px;
+            .item {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                img {
+                    width: 24px;
+                    height: 24px;
+                    cursor: pointer;
+                }
+                .data {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
+        }
+        .rights {
+            color: #4a4a4a;
+            font-size: 20px;
+        }
     }
 }

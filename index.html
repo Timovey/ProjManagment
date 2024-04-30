@@ -26,7 +26,13 @@
                 <div class="preview-desc">Виртуальный фитнес</div>
            </div>
         </section>
-        <section class="main">
+        <section class="what">
+            <h1>Что такое SportVR?</h1>
+            <div class="descr">
+                SportVR — это инновационный способ заниматься спортом, не выходя из дома. С помощью виртуальной реальности вы сможете погрузиться в атмосферу настоящих тренировок и заниматься спортом в любое удобное время.
+            </div>
+        </section>
+        <section class="why">
             <h2 class="title">Почему SportVR?</h2>
             <div class="benefits">
                 <div class="item">
@@ -57,15 +63,60 @@
             </div>
         </section>
         <section class="buy">
-            <h2 class="title">Где купить?</h2>
+            <h2 class="title">Где попробовать?</h2>
+            <div class="descr">
+                Наш продукт можно попробовать:
+            </div>
+            <div class="items">
+                <a href="download"  class="item my">
+                    <img src="./images/vr-1.svg" alt="">
+                </a>
+                <a href="https://www.viveport.com/" target="_blank" class="item vive">
+                    <img src="./images/image.png" alt="">
+                </a>
+            </div>
         </section>
     </main>
     <footer class="footer">
-        <div class="wrapeer">
+        <div class="wrapper">
             <div class="item">
-                
+                <img src="./images/information.svg" alt="">
+                <div class="data">
+                    <span>ООО «Спорт Ви Ар»</span>
+                    <br/>
+                    <span>ИНН: 732324272502</span> 
+                    <span>КПП: 7325003201</span>
+                    <span>ОГРН: 1233435001610</span>
+                </div>
             </div>
+            <div class="item">
+                <img src="./images/map-marker.svg" alt="">
+                <div class="data">
+                    <span>432000, Г. УЛЬЯНОВСК, </span>
+                    <span>пр. Нариманова 1</span> 
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/phone-classic.svg" alt="">
+                <div class="data">
+                    +7 8422 20-00-00
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/mail.svg" alt="">
+                <div class="data">
+                    example@mail.com
+                </div>
+            </div>
+        </div>
+        <div class="rights" id="rights">
         </div>
     </footer>
 </body>
 </html>
+<script>
+    function ready() {
+        document.getElementById("rights").innerHTML=`© ${(new Date().getFullYear())} Спорт Ви Ар. ВСЕ ПРАВА ЗАЩИЩЕНЫ.`;
+    }
+    document.addEventListener("DOMContentLoaded", ready);
+</script>
